@@ -18,7 +18,7 @@ public class PilhaPrioridade {
                 break;
         }
     }
-    public Processo pop(Processo p){
+    public Processo pop(){
         if(pilhaUrgente.isEmpty()){
             if (pilhaNormal.isEmpty()) {
                 return pilhaBaixa.pop();
