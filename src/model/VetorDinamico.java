@@ -36,17 +36,28 @@ public class VetorDinamico {
     vetor[ocupacao++] = processo;
   }
 
-  public int remove() {
+  public Processo remove() {
     if (estaVazio())
-      return -1;
+      return null;
     ocupacao --;
-    int removed = vetor[ocupacao].getProtocolo();
+    Processo removed = vetor[ocupacao];
     double ocupacaoMinima = (double)vetor.length * 0.25;
     if (ocupacaoMinima > ocupacao && vetor.length != tamanhoInicial) {
       redimenciona(vetor.length / 2);
     }
-    System.out.println(vetor);
     return removed;
+  }
+
+  public Processo get(int index) {
+    if (index < 0 || index >= ocupacao) return null;
+    return vetor[index];
+  }
+
+  public int buscarPorProtocolo(int protocolo){
+    for (int i = 0; i < vetor.length; i++) {
+      if(protocolo == vetor[i].getProtocolo()) return i;
+    }
+    return -1;
   }
 
   private boolean estaVazio(){
