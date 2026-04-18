@@ -33,4 +33,7 @@ public class PilhaProcesso {
     public boolean isEmpty(){
         return vetor.getOcupacao() == 0;
     }
+    public int tamanho(){
+        return vetor.size();
+    }
 }
