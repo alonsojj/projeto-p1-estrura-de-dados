@@ -1,4 +1,3 @@
-package model;
 
 public class PilhaPrioridade {
     private PilhaProcesso pilhaUrgente = new PilhaProcesso();

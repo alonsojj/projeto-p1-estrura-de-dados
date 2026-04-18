@@ -1,8 +1,5 @@
-package view;
 
 import java.util.Scanner;
-import model.Processo;
-import controller.CentralAtendimento;
 
 public class ConsoleView {
     private Scanner scn = new Scanner(System.in);

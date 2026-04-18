@@ -1,4 +1,3 @@
-package model;
 
 public class VetorDinamico {
   private Processo[] vetor;

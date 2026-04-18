@@ -1,7 +1,4 @@
-package controller;
 
-import model.PilhaPrioridade;
-import model.Processo;
 
 public class CentralAtendimento {
     private PilhaPrioridade pilha = new PilhaPrioridade();

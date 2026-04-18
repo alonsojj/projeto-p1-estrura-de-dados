@@ -1,6 +1,4 @@
-package test;
-import model.Processo;
-import model.VetorDinamico;
+
 public class VetorTest {
   public static void main(String[] args) {
     VetorDinamico vetor = new VetorDinamico();
