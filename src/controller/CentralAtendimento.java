@@ -1,11 +1,11 @@
 package controller;
 
-import model.PilhaProcesso;
+import model.PilhaPrioridade;
 import model.Processo;
 
 public class CentralAtendimento {
-    private PilhaProcesso pilha = new PilhaProcesso();
-    private PilhaProcesso pilhaAux = new PilhaProcesso();
+    private PilhaPrioridade pilha = new PilhaPrioridade();
+    private PilhaPrioridade pilhaAux = new PilhaPrioridade();
     public void abrirProcesso(Processo p){
         pilha.push(p);
         /*
@@ -16,7 +16,7 @@ public class CentralAtendimento {
          ou 
         adiciona uma função auxiliar para indicar o vaizio(mas isso n ta explicito no pdf)
         */
-        while (!pilhaAux.isEmpty()) {
+        while (!pilhaAux.estaVazio()) {
             pilhaAux.pop();
         }
 

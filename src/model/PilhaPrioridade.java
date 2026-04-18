@@ -48,4 +48,7 @@ public class PilhaPrioridade {
         System.out.println("BAIXA: ");
         pilhaBaixa.imprimir();
     }
+    public boolean estaVazio(){
+        return pilhaBaixa.isEmpty() && pilhaNormal.isEmpty() && pilhaUrgente.isEmpty();
+    }
 }
