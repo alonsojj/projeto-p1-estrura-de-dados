@@ -21,13 +21,20 @@ public class CentralAtendimento {
         }
 
     }
-    public void atenderProximo(){
-        pilhaAux.push(pilha.pop());
+
+    public Processo atenderProximo() {
+        Processo processo = pilha.pop();
+        pilhaAux.push(processo);
+        return processo;
     }
-    public void desfazerUltimoAtendimento(){
-        pilha.push(pilhaAux.pop());
+
+    public Processo desfazerUltimoAtendimento() {
+        Processo processo = pilhaAux.pop();
+        pilha.push(processo);
+        return processo;
     }
-    public void listarPendentes(){
+
+    public void listarPendentes() {
         pilha.imprimir();
     }
     public void listarHistorico(){
