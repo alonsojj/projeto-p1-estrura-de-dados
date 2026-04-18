@@ -12,14 +12,14 @@ public class PilhaProcesso {
     }
 
     public Processo pop() {
-        if (vetor.getOcupacao() == 0) {
+        if (isEmpty()) {
             throw new PilhaVaziaException("A pilha está vazia");
         }
         return vetor.remove();
     }
 
     public Processo peek() {
-        if (vetor.getOcupacao() == 0) {
+        if (isEmpty()) {
             throw new PilhaVaziaException("A pilha está vazia");
         }
         return vetor.get(vetor.getOcupacao()-1);
@@ -29,5 +29,8 @@ public class PilhaProcesso {
         for (int i = vetor.getOcupacao() - 1; i >= 0; i--) {
             System.out.println(vetor.get(i));
         }
+    }
+    public boolean isEmpty(){
+        return vetor.getOcupacao() == 0;
     }
 }
