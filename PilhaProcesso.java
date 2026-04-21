@@ -34,7 +34,7 @@ public class PilhaProcesso {
         return vetor.getOcupacao() == 0;
     }
 
-    public int tamanho() {
-        return vetor.size();
+    public int capacidade() {
+        return vetor.getCapacidade();
     }
 }

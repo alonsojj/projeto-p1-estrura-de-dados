@@ -74,7 +74,7 @@ public class VetorDinamico {
     return ocupacao;
   }
 
-  public int size() {
+  public int getCapacidade() {
     return capacidade;
   }
 }

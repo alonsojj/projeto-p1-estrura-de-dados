@@ -18,7 +18,7 @@ public class VetorTest {
 
     vetor.adiciona(processo5);
     System.out.println("Ocupando: " + vetor.getOcupacao());
-    System.out.println("Tamanho aumentado: " + vetor.size());
+    System.out.println("Tamanho aumentado: " + vetor.getCapacidade());
 
     vetor.adiciona(processo6);
     vetor.adiciona(processo7);
@@ -26,7 +26,7 @@ public class VetorTest {
 
     vetor.adiciona(new Processo("Novo", "Geral", 1));
     System.out.println("Ocupando: " + vetor.getOcupacao());
-    System.out.println("Tamanho aumentado: " + vetor.size());
+    System.out.println("Tamanho aumentado: " + vetor.getCapacidade());
 
     System.out.println("\nLISTA DE PROCESSOS");
     vetor.listar();
@@ -35,7 +35,7 @@ public class VetorTest {
 
     for (int i = 0; i < 6; i++) {
       vetor.remove();
-      System.out.println("Removi um. Capacidade: " + vetor.getOcupacao() + " Tamanho:" + vetor.size());
+      System.out.println("Removi um. Capacidade: " + vetor.getOcupacao() + " Tamanho:" + vetor.getCapacidade());
     }
 
     System.out.println("\nEstado final do vetor:");

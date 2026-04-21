@@ -38,8 +38,8 @@ public class PilhaPrioridade {
         return pilhaUrgente.peek();
     }
 
-    public int tamanho() {
-        return pilhaBaixa.tamanho() + pilhaNormal.tamanho() + pilhaUrgente.tamanho();
+    public int capacidade() {
+        return pilhaBaixa.capacidade() + pilhaNormal.capacidade() + pilhaUrgente.capacidade();
     }
 
     public void imprimir() {
