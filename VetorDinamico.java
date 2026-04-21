@@ -2,15 +2,16 @@
 public class VetorDinamico {
   private Processo[] vetor;
   private int ocupacao;
-  private int tamanhoInicial;
+  private int capacidadeInicial;
+  private int capacidade;
 
   public VetorDinamico() {
-    this.tamanhoInicial = 4;
-    this.vetor = new Processo[tamanhoInicial];
+    this.capacidadeInicial = 4;
+    this.vetor = new Processo[capacidadeInicial];
   }
 
   public VetorDinamico(int tamanho) {
-    this.tamanhoInicial = tamanho;
+    this.capacidadeInicial = tamanho;
     this.vetor = new Processo[tamanho];
   }
 
@@ -23,14 +24,14 @@ public class VetorDinamico {
   }
 
   public void listar() {
-    for (int i = 0; i < vetor.length; i++) {
+    for (int i = 0; i < capacidade; i++) {
       System.out.println(vetor[i]);
     }
   }
 
   public void adiciona(Processo processo) {
     if (estaCheio()) {
-      redimenciona(vetor.length * 2);
+      redimenciona(capacidade * 2);
     }
     vetor[ocupacao++] = processo;
   }
@@ -40,9 +41,9 @@ public class VetorDinamico {
       return null;
     ocupacao--;
     Processo removed = vetor[ocupacao];
-    double ocupacaoMinima = (double) vetor.length * 0.25;
-    if (ocupacaoMinima > ocupacao && vetor.length != tamanhoInicial) {
-      redimenciona(vetor.length / 2);
+    double ocupacaoMinima = (double) capacidade * 0.25;
+    if (ocupacaoMinima > ocupacao && capacidade != capacidadeInicial) {
+      redimenciona(capacidade / 2);
     }
     return removed;
   }
@@ -54,7 +55,7 @@ public class VetorDinamico {
   }
 
   public int buscarPorProtocolo(int protocolo) {
-    for (int i = 0; i < vetor.length; i++) {
+    for (int i = 0; i < capacidade; i++) {
       if (protocolo == vetor[i].getProtocolo())
         return i;
     }
@@ -66,7 +67,7 @@ public class VetorDinamico {
   }
 
   private boolean estaCheio() {
-    return ocupacao == vetor.length;
+    return ocupacao == capacidade;
   }
 
   public int getOcupacao() {
@@ -74,6 +75,6 @@ public class VetorDinamico {
   }
 
   public int size() {
-    return vetor.length;
+    return capacidade;
   }
 }
