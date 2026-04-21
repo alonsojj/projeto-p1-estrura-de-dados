@@ -24,7 +24,7 @@ public class VetorDinamico {
   }
 
   public void listar() {
-    for (int i = 0; i < capacidade; i++) {
+    for (int i = 0; i < ocupacao; i++) {
       System.out.println(vetor[i]);
     }
   }
@@ -55,7 +55,7 @@ public class VetorDinamico {
   }
 
   public int buscarPorProtocolo(int protocolo) {
-    for (int i = 0; i < capacidade; i++) {
+    for (int i = 0; i < ocupacao; i++) {
       if (protocolo == vetor[i].getProtocolo())
         return i;
     }
