@@ -7,16 +7,19 @@ public class VetorDinamico {
 
   public VetorDinamico() {
     this.capacidadeInicial = 4;
-    this.vetor = new Processo[capacidadeInicial];
+    this.capacidade = capacidadeInicial;
+    this.vetor = new Processo[capacidade];
   }
 
-  public VetorDinamico(int tamanho) {
-    this.capacidadeInicial = tamanho;
-    this.vetor = new Processo[tamanho];
+  public VetorDinamico(int capacidade) {
+    this.capacidadeInicial = capacidade;
+    this.capacidade = capacidade;
+    this.vetor = new Processo[capacidade];
   }
 
-  public void redimenciona(int novoTamanho) {
-    Processo[] temp = new Processo[novoTamanho];
+  public void redimenciona(int novaCapacidade) {
+    this.capacidade = novaCapacidade;
+    Processo[] temp = new Processo[capacidade];
     for (int i = 0; i < ocupacao; i++) {
       temp[i] = vetor[i];
     }

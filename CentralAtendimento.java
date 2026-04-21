@@ -35,6 +35,6 @@ public class CentralAtendimento {
         pilha.listar();
     }
     public void listarHistorico(){
-        pilhaAux.imprimir();
+        pilhaAux.listar();
     }
 }
