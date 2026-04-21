@@ -28,7 +28,7 @@ public class PilhaPrioridade {
         return pilhaUrgente.pop();
     }
 
-    public Processo peek(Processo p) {
+    public Processo peek() {
         if (pilhaUrgente.estaVazio()) {
             if (pilhaNormal.estaVazio()) {
                 return pilhaBaixa.peek();
