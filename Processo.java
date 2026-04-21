@@ -9,9 +9,9 @@ public class Processo {
   private int prioridade;
   private String dataHora;
 
-  public Processo(String solicitante, String tipoServico,int prioridade){
+  public Processo(String solicitante, String tipoServico, int prioridade) {
     this.solicitante = solicitante;
-    if(prioridade>3 || prioridade<1){
+    if (prioridade > 3 || prioridade < 1) {
       System.out.println("Erro prioridade deve ser entre 1 e 3");
       return;
     }
