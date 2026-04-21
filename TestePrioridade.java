@@ -15,6 +15,9 @@ public class TestePrioridade {
         System.out.println("Esperado: prioridades 3 primeiro, depois 2, depois 1");
         System.out.println();
 
+        System.out.println("Listando todos em ordem:");
+        pilha.listar();
+        System.out.println("Removendo em ordem:");
         while (!pilha.estaVazio()) {
             Processo p = pilha.pop();
             System.out.println(p);
