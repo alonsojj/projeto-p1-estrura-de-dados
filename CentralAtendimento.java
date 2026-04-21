@@ -32,9 +32,9 @@ public class CentralAtendimento {
     }
 
     public void listarPendentes() {
-        pilha.imprimir();
+        pilha.listar();
     }
     public void listarHistorico(){
-        pilhaAux.imprimir();
+        pilhaAux.listar();
     }
 }

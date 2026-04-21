@@ -42,7 +42,7 @@ public class PilhaPrioridade {
         return pilhaBaixa.capacidade() + pilhaNormal.capacidade() + pilhaUrgente.capacidade();
     }
 
-    public void imprimir() {
+    public void listar() {
         System.out.println("URGENTES: ");
         pilhaUrgente.imprimir();
         System.out.println("NORMAL: ");
