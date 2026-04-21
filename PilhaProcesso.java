@@ -11,17 +11,17 @@ public class PilhaProcesso {
     }
 
     public Processo pop() {
-        if (isEmpty()) {
+        if (estaVazio()) {
             throw new PilhaVaziaException("A pilha está vazia");
         }
         return vetor.remove();
     }
 
     public Processo peek() {
-        if (isEmpty()) {
+        if (estaVazio()) {
             throw new PilhaVaziaException("A pilha está vazia");
         }
-        return vetor.get(vetor.getOcupacao()-1);
+        return vetor.get(vetor.getOcupacao() - 1);
     }
 
     public void imprimir() {
@@ -29,10 +29,12 @@ public class PilhaProcesso {
             System.out.println(vetor.get(i));
         }
     }
-    public boolean isEmpty(){
+
+    public boolean estaVazio() {
         return vetor.getOcupacao() == 0;
     }
-    public int tamanho(){
+
+    public int tamanho() {
         return vetor.size();
     }
 }
