@@ -27,13 +27,21 @@ public class ConsoleView {
     }
 
     public void atenderProximo() {
-        Processo processo = central.atenderProximo();
-        System.out.println("Atendendo processo: " + processo);
+        try {
+            Processo processo = central.atenderProximo();
+            System.out.println("Atendendo processo: " + processo);
+        } catch (Exception e) {
+            System.out.println("Erro aconteceu: " + e);
+        }
     }
 
     public void desfazerUltimoAtendimento() {
-        Processo processo = central.desfazerUltimoAtendimento();
-        System.out.println("Desfeito atendimento do processo: " + processo);
+        try {
+            Processo processo = central.desfazerUltimoAtendimento();
+            System.out.println("Desfeito atendimento do processo: " + processo);
+        } catch (Exception e) {
+            System.out.println("Erro aconteceu: " + e);
+        }
     }
 
     public void listarPendentes() {
